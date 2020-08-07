@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block head %}
+	<title>Anonymization Tool</title>
+	<link rel="stylesheet" href = "/static/css/index.css">
+{% endblock %}
+{% block body %}
+	<div class = "app">
+		<h1>Crypto</h1>
+		<p> anonymaization tool for securing personal data in medical reports <br> Secure More Stress Less </p>
+		<form action="/upload">
+		<button class="btn" type="submit"><span>Begin</span></button>
+		</form>
+	</div>
+{% endblock %}

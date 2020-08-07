@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Anonymization Tool</title>
+    <link rel="stylesheet" href = "/static/css/faq.css">
+{% endblock %}
+{% block body %}
+	<div class = "app">
+		<button type="button" class="collapsible">1. Is this service confidential ?</button>
+        <div class="content">
+        <p>we respect your privacy and does not share your input or output files with any third party. All input images and generated text files are automatically deleted within a short period of time typically 10 min.</p>
+        </div>
+        <button type="button" class="collapsible">2. How much is the service ?</button>
+        <div class="content">
+            <p>100% free</p>
+        </div>
+        <button type="button" class="collapsible">3. How many Document can i manage per day ?</button>
+        <div class="content">
+            <p>Unlimited</p>
+        </div>
+        <button type="button" class="collapsible">4. does this service can recognize handwriting images ?</button>
+        <div class="content">
+            <p>No. only typewritten text. There are some research work out regarding this matter but no satisfactory results yet.</p>
+        </div>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                content.style.maxHeight = null;
+                } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+{% endblock %}

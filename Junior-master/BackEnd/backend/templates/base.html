@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href = "/static/css/Base.css">
+            {% block head %} {% endblock %}
+        </head>
+        <body>
+            <div class = "con">
+                <img src="/static/privacy4.png" class = "image"/>
+            </div>
+            <div class = "div1">
+                <div class = "div2">
+                    <ul class = "unor">
+                    <li class = "line"><p class = "pd">  </p></li>
+                    <li class = "line"><p class = "pd">  </p></li>
+                    <li class = "line"><p class = "pd">  </p></li>
+                    <li class = "line"><p class = "pd">  </p></li>
+                    <li class = "line"><a class="hypernav" href="/home">Home</a></li>
+                    <li class = "line"><a class="hypernav" href="#services">Services</a></li>
+                    <li class = "line"><a class="hypernav" href="/faq">FAQ</a></li>			          	          
+                    <li class = "line"><a class="hypernav" href="#contact-us">Contact</a></li>
+                    <li class = "line"><p class = "pd">  </p></li>
+                    <li class = "line"><p class = "pd">  </p></li>
+                    <li class = "line"><p class = "pd">  </p></li>
+                    <li class = "line"><p class = "pd">  </p></li>
+                    </ul> 		
+                </div>
+            </div>
+            {% block body %} 
+            {% endblock %}
+        </body>
+    </html>

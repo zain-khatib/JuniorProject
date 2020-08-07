@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{%block head%}
+<style>
+    .app{
+    margin: auto;
+    margin-top: 30px;
+    background-color: #ffffff;
+    border: 0.1px  solid black;
+    opacity: 0.6;
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    }
+</style>
+{%endblock head%}
+{% block body %}
+    <div class ="app">
+    <form action="" method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <br><br>
+        {{ form.image }}
+        {% if form.image.errors %}
+        {% for error in form.image.errors %}
+            {{ error }}
+        {% endfor %}
+    {% endif %}
+        <br><br>
+        {{ form.language.label }}
+        {{form.language}}
+        {% if form.language.errors %}
+            {% for error in form.language.errors %}
+                {{ error }}
+            {% endfor %}
+        {% endif %}
+        <br><br>
+        {{ form.submit }}
+    </form>
+    </div>
+{% endblock body %}
